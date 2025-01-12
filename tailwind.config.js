@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -9,10 +9,10 @@ export default {
       inherit: 'inherit',
       transparent: 'transparent',
       current: 'currentColor',
-      white:  colors.white,
+      white: colors.white,
       primary: {
         light: '#b1e4f0',
-        DEFAULT: '#26A6CA',
+        DEFAULT: 'var(--dui-primary-color)',
         dark: '#225268',
         container: '#effbfc',
       },
@@ -27,16 +27,16 @@ export default {
         dim: '#e2e8f0',
       },
       error: {
-        DEFAULT: '#ef4444',  // red-500
-        container: '#fee2e2' // red-100
+        DEFAULT: '#ef4444', // red-500
+        container: '#fee2e2', // red-100
       },
       warning: {
-        DEFAULT: '#facc15',  // yellow-400
-        container: '#fef9c3' // yellow-100
+        DEFAULT: '#facc15', // yellow-400
+        container: '#fef9c3', // yellow-100
       },
       success: {
-        DEFAULT: '#22c55e',  // green-500
-        container: '#dcfce7' // green-100
+        DEFAULT: '#22c55e', // green-500
+        container: '#dcfce7', // green-100
       },
       on: {
         primary: {
@@ -58,7 +58,7 @@ export default {
         },
         success: {
           DEFAULT: colors.white,
-        }
+        },
       },
       outline: {
         lighter: colors.gray[50],
@@ -95,4 +95,7 @@ export default {
     },
   },
   plugins: [],
+  /* corePlugins: {
+    preflight: false,
+  }, */
 };
