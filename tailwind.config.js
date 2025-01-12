@@ -1,13 +1,72 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors')
 
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     colors: {
       inherit: 'inherit',
+      transparent: 'transparent',
       current: 'currentColor',
-      white: '#ffffff',
+      white:  colors.white,
+      primary: {
+        light: '#b1e4f0',
+        DEFAULT: '#26A6CA',
+        dark: '#225268',
+        container: '#effbfc',
+      },
+      secondary: {
+        light: '#a5f5d7',
+        DEFAULT: '#0bbe92',
+        container: '#ebfef7',
+      },
+      surface: {
+        bright: 'white',
+        DEFAULT: '#f8fafc',
+        dim: '#e2e8f0',
+      },
+      error: {
+        DEFAULT: '#ef4444',  // red-500
+        container: '#fee2e2' // red-100
+      },
+      warning: {
+        DEFAULT: '#facc15',  // yellow-400
+        container: '#fef9c3' // yellow-100
+      },
+      success: {
+        DEFAULT: '#22c55e',  // green-500
+        container: '#dcfce7' // green-100
+      },
+      on: {
+        primary: {
+          DEFAULT: colors.white,
+          container: '#20637e',
+        },
+        secondary: {
+          DEFAULT: colors.white,
+          container: '#017b62',
+        },
+        surface: {
+          DEFAULT: '#0f172a',
+        },
+        error: {
+          DEFAULT: colors.white,
+        },
+        warning: {
+          DEFAULT: colors.white,
+        },
+        success: {
+          DEFAULT: colors.white,
+        }
+      },
+      outline: {
+        lighter: colors.gray[50],
+        light: colors.gray[200],
+        DEFAULT: colors.gray[300],
+        dark: colors.gray[400],
+        darker: colors.gray[500],
+      },
     },
     screens: {
       sm: '360px',

@@ -1,0 +1,23 @@
+.btn-base {
+  @apply rounded-lg px-xl py-sm;
+}
+
+.btn-elevated {
+  @apply btn-base drop-shadow-sm;
+  &.primary {
+    @apply bg-primary text-on-primary
+  }
+  &.secondary {
+    @apply bg-secondary text-on-secondary
+  }
+}
+
+.btn-filled {
+  @apply btn-base;
+  &.primary {
+    @apply bg-primary text-on-primary
+  }
+  &.secondary {
+    @apply bg-secondary text-on-secondary
+  }
+}
