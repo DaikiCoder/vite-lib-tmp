@@ -6,8 +6,7 @@
   "types": "index.d.ts",
   "peerDependencies": {
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react/jsx-runtime": "^18.0.0"
+    "react-dom": "^18.0.0"
   },
   "author": "Daiki Coder",
   "description": "Daiki UI... A React component library",
