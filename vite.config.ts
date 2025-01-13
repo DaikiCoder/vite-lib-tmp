@@ -22,7 +22,7 @@ export default defineConfig({
   build: {
     copyPublicDir: false,
     lib: {
-      name: 'DaikiUI',
+      name: '@daiki-ui/react',
       formats: ['es'],
       entry: {
         index: 'src/lib/index.ts',
