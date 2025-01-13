@@ -8,6 +8,8 @@ export interface CardProps extends HTMLAttributes<HTMLElement> {
 
 export function Card({ children, className, ...props }: CardProps) {
   return (
-    <div className={`card-base ${className}`} {...props}>{children}</div>
-  )
+    <div className={`card-base ${className}`} {...props}>
+      {children}
+    </div>
+  );
 }

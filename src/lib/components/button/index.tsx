@@ -11,7 +11,6 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export type ButtonVariant = 'elevated' | 'filled' | 'outlined' | 'text' | 'icon';
 export type ButtonColor = 'primary' | 'secondary';
 
-
 export function Button({
   children,
   className = '',
@@ -29,7 +28,7 @@ export function Button({
   const variantClass = variantClasses[variant];
 
   return (
-    <button type="button" className={`${variantClass} ${color} ${className}`} {...props}>
+    <button className={`${variantClass} ${color} ${className}`} {...props}>
       {children}
     </button>
   );

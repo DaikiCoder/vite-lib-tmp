@@ -1,3 +1,3 @@
 .card-base {
-  @apply flex bg-primary-light p-lg rounded-lg
+  @apply flex bg-primary-light p-lg rounded-lg;
 }

@@ -24,7 +24,6 @@ export default defineConfig({
     lib: {
       name: 'DaikiUI',
       formats: ['es'],
-      /* entry: ['src/lib/index.ts'], */
       entry: {
         index: 'src/lib/index.ts',
         'components/button/button': 'src/lib/components/button',
@@ -35,11 +34,6 @@ export default defineConfig({
       external: ['react', 'react/jsx-runtime'],
       output: {
         preserveModules: true,
-        // Put chunk files at <output>/chunks
-        //chunkFileNames: 'chunks/[name].[hash].js',
-        // Put chunk styles at <output>/assets
-        /* assetFileNames: 'assets/[name][extname]', */
-        //entryFileNames: '[name].js',
       },
     },
   },
