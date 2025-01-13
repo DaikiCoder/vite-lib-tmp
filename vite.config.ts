@@ -16,6 +16,10 @@ export default defineConfig({
           src: './src/lib/package.json',
           dest: './',
         },
+        {
+          src: './src/lib/styles.css',
+          dest: './',
+        },
       ],
     }),
   ],
