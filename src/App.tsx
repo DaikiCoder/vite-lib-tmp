@@ -1,4 +1,4 @@
-import { Card } from '@daiki-ui/react';
+import { Button, Card } from '@daiki-ui/react';
 import './App.css';
 
 function App() {
@@ -9,10 +9,10 @@ function App() {
           Hello world!
         </h1>
         <div className="flex gap-md justify-center">
-          {/* <Button>Button Filled</Button>
+          <Button>Button Filled</Button>
           <Button className="" color="primary">
             Button
-          </Button> */}
+          </Button>
         </div>
         <div className="flex gap-md justify-center">
           <Card>Card</Card>
