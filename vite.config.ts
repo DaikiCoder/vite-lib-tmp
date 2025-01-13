@@ -2,10 +2,23 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), libInjectCss(), dts(/* { tsconfigPath: './tsconfig.lib.json' } */)],
+  plugins: [
+    react(),
+    libInjectCss(),
+    dts({ tsconfigPath: './tsconfig.lib.json' }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: './src/lib/package.json',
+          dest: './',
+        },
+      ],
+    }),
+  ],
   build: {
     copyPublicDir: false,
     lib: {
@@ -21,11 +34,12 @@ export default defineConfig({
     rollupOptions: {
       external: ['react', 'react/jsx-runtime'],
       output: {
+        preserveModules: true,
         // Put chunk files at <output>/chunks
         //chunkFileNames: 'chunks/[name].[hash].js',
         // Put chunk styles at <output>/assets
-        assetFileNames: 'assets/[name][extname]',
-        entryFileNames: '[name].js',
+        /* assetFileNames: 'assets/[name][extname]', */
+        //entryFileNames: '[name].js',
       },
     },
   },

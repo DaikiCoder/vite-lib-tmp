@@ -1,5 +1,16 @@
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 import './button.css';
-import { ButtonProps, ButtonVariant } from './button.interfaces';
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+  className?: string;
+  variant?: ButtonVariant;
+  color?: ButtonColor;
+}
+
+export type ButtonVariant = 'elevated' | 'filled' | 'outlined' | 'text' | 'icon';
+export type ButtonColor = 'primary' | 'secondary';
+
 
 export function Button({
   children,

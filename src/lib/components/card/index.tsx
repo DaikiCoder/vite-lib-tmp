@@ -1,5 +1,10 @@
+import { HTMLAttributes, ReactNode } from 'react';
 import './card.css';
-import { CardProps } from "./card.interfaces";
+
+export interface CardProps extends HTMLAttributes<HTMLElement> {
+  children: ReactNode;
+  className?: string;
+}
 
 export function Card({ children, className, ...props }: CardProps) {
   return (
