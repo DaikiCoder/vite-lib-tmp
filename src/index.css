@@ -1,4 +1,4 @@
-@import '@daiki-ui/react/styles.css';
+/* @import '@daiki-ui/react/styles.css'; */
 
 @tailwind base;
 @tailwind components;
@@ -6,6 +6,6 @@
 
 @layer base {
   :root {
-    --dui-primary-color: #26A6FF
+    /* --dui-primary-color: #26A6FF */
   }
 }

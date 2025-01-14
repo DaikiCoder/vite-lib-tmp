@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
+import { daikiui } from '@daiki-ui/react/plugin';
 
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -12,7 +13,7 @@ export default {
       white: colors.white,
       primary: {
         light: '#b1e4f0',
-        DEFAULT: 'var(--dui-primary-color)',
+        DEFAULT: 'rgb(var(--dui-primary-color))',
         dark: '#225268',
         container: '#effbfc',
       },
@@ -94,7 +95,13 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    daikiui({
+      colors: {
+        primaryColor: '#FAF',
+      },
+    }),
+  ],
   /* corePlugins: {
     preflight: false,
   }, */

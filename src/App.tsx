@@ -1,4 +1,4 @@
-import { Button, Card } from '@daiki-ui/react';
+import { Button, Card } from '@daiki-ui/react/components';
 import './App.css';
 
 function App() {

@@ -31,15 +31,17 @@ export default defineConfig({
       formats: ['es'],
       entry: {
         index: 'src/lib/index.ts',
+        'components/index': 'src/lib/components',
         'components/button/button': 'src/lib/components/button',
         'components/card/card': 'src/lib/components/card',
+        'plugin/index': 'src/lib/plugin',
       },
     },
     rollupOptions: {
-      external: ['react', 'react/jsx-runtime', 'react-dom'],
+      external: ['react', 'react/jsx-runtime', 'react-dom', 'tailwindcss/plugin'],
       output: {
         preserveModules: true,
       },
     },
-  }
+  },
 });
